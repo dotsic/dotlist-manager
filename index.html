@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dotlist Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+</head>
+<!--
+//                                             | |       | |       (_)      
+//                                           __| |  ___  | |_  ___  _   ___ 
+//                                          / _` | / _ \ | __|/ __|| | / __|
+//                                       _ | (_| || (_) || |_ \__ \| || (__ 
+//                                      (_) \__,_| \___/  \__||___/|_| \___|                                          
+-->
+<body>
+
+<div class="app-grid">
+    <aside class="sidebar">
+        <div class="logo">✦ dotlist Manager</div>
+        <p class="description">v18.4 | Gestão de Produção</p>
+        
+        <textarea id="inputList" placeholder="Cole os nomes aqui..."></textarea>
+        
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="processList()">Processar Lista</button>
+            <button class="btn btn-excel" onclick="exportToExcel()">Exportar Excel</button>
+        </div>
+    </aside>
+
+    <main class="results-container">
+        <div class="toolbar">
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Buscar cliente...">
+            </div>
+            <div id="itemCounter" class="counter">0 itens</div>
+        </div>
+
+        <div class="table-header">
+            <div>Original</div>
+            <div>Nome Final</div>
+            <div>Tamanho</div>
+            <div>Modelo</div>
+            <div>Status</div>
+        </div>
+
+        <div id="tableBody">
+            <div class="empty-state">Aguardando processamento...</div>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

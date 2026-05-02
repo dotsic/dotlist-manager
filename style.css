@@ -1,0 +1,195 @@
+/* 
+//                                                    | |       | |       (_)      
+//                                                  __| |  ___  | |_  ___  _   ___ 
+//                                                 / _` | / _ \ | __|/ __|| | / __|
+//                                              _ | (_| || (_) || |_ \__ \| || (__ 
+//                                             (_) \__,_| \___/  \__||___/|_| \___|
+*/
+:root {
+    --primary: #2563eb;
+    --bg: #f8fafc; 
+    --text-header: #94a3b8;
+    --text-main: #334155;
+    --border: #e2e8f0;
+    --card-bg: #ffffff;
+    --input-border: #e2e8f0;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg); 
+    color: var(--text-main); 
+    padding: 40px; 
+}
+
+.app-grid { 
+    display: grid; 
+    grid-template-columns: 340px 1fr; 
+    gap: 40px; 
+    max-width: 1600px; 
+    margin: 0 auto; 
+}
+
+.sidebar { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 16px; 
+    border: 1px solid var(--border); 
+    height: fit-content; 
+    position: sticky; 
+    top: 40px; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+}
+
+.logo { font-size: 18px; font-weight: 700; color: #1e293b; margin-bottom: 5px; }
+.description { font-size: 13px; color: var(--text-header); margin-bottom: 25px; }
+
+textarea { 
+    width: 100%; 
+    height: 450px; 
+    border: 1px solid var(--input-border); 
+    border-radius: 12px; 
+    padding: 15px; 
+    font-size: 13px; 
+    resize: none; 
+    outline: none; 
+    background: #fafafa; 
+    margin-bottom: 20px; 
+}
+
+.btn { 
+    width: 100%; 
+    padding: 14px; 
+    border-radius: 10px; 
+    border: none; 
+    font-weight: 600; 
+    cursor: pointer; 
+    font-size: 14px; 
+    margin-bottom: 10px; 
+    transition: 0.2s;
+}
+.btn-primary { background: var(--primary); color: white; }
+.btn-excel { background: #16a34a; color: white; }
+.btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.toolbar { 
+    display: flex; 
+    justify-content: flex-end; 
+    margin-bottom: 30px; 
+    align-items: center; 
+    gap: 15px; 
+}
+.search-box { position: relative; width: 300px; }
+.search-box input { 
+    width: 100%; 
+    border: none; 
+    border-bottom: 1px solid var(--border); 
+    background: transparent; 
+    padding: 10px 10px 10px 30px; 
+    font-size: 14px; 
+    outline: none; 
+}
+.counter { font-size: 12px; font-weight: 600; color: var(--text-header); }
+
+.table-header, .order-row { 
+    display: grid; 
+    grid-template-columns: 200px 1fr 100px 160px 100px; 
+    gap: 20px;
+    align-items: center;
+}
+
+.table-header { 
+    padding: 0 40px 15px 40px; 
+    color: var(--text-header); 
+    font-size: 12px; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
+}
+
+.order-row { 
+    background: var(--card-bg); 
+    margin-bottom: 12px; 
+    padding: 20px 40px; 
+    border-radius: 15px; 
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.col-original { 
+    font-style: italic; 
+    color: var(--text-header); 
+    font-size: 13px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+input.edit-name { 
+    width: 100%; 
+    padding: 10px 20px; 
+    border: 1px solid var(--input-border); 
+    border-radius: 10px; 
+    font-size: 14px; 
+    color: #334155;
+    outline: none; 
+    transition: 0.2s;
+}
+input.edit-name:focus { border-color: var(--primary); }
+
+.input-warning { 
+    border-color: #f97316 !important; 
+    background-color: #fffaf0 !important; 
+}
+
+select { 
+    padding: 10px; 
+    border-radius: 10px; 
+    border: 1px solid var(--input-border); 
+    font-size: 13px; 
+    background: white; 
+    cursor: pointer;
+    outline: none;
+}
+
+.sel-mod { 
+    font-weight: 700; 
+    color: var(--primary); 
+    background-color: #eff6ff; 
+    border: 1px solid #dbeafe; 
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+}
+.mode-baby { 
+    color: #be185d; 
+    background: #fdf2f8; 
+    border-color: #fbcfe8; 
+}
+
+.status-pill { 
+    padding: 6px 12px; 
+    border-radius: 8px; 
+    font-size: 11px; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    text-align: center; 
+    justify-self: center;
+}
+.status-ok { background: #e6f4ea; color: #1e8e3e; }
+.status-rev { background: #fff7e6; color: #d48806; }
+
+.empty-state { 
+    text-align: center; 
+    padding: 100px; 
+    color: var(--text-header); 
+    background: white; 
+    border-radius: 16px; 
+    border: 2px dashed var(--border); 
+}
