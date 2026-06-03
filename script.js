@@ -29,7 +29,7 @@ async function loadConfig() {
         appConfig = {
             sizes: ["6M", "T1", "T2", "T4", "T6", "T8", "T10", "T12", "T14", "PP", "P", "M", "G", "GG", "XG", "XGG", "S1"],
             babyLookTriggers: ["BBL", "BL", "BABY", "BABYLOOK", "LOOK", "BB"],
-            noiseWords: ["T", "TAM", "TAMANHO", "TM", "PARA", "DE", "QUER", "UN", "CAMISA", "CAMISETA", "UNIDADE", "TAM.", "*", ".",],
+            noiseWords: ["T", "TAM", "TAMANHO", "TM", "PARA", "DE", "QUER", "UN", "CAMISA", "CAMISETA", "UNIDADE", "TAM.", "*", "."],
             specialChars: [".", "_", "-", "@", "#", "$"]
         };
         if(btn) btn.disabled = false;
